@@ -59,6 +59,16 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   rules:
+  - host: "bike.192-168-10-42.nip.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: dev-bike-nginx-service
+            port:
+              number: 80
   - host: "bike.dev.jpto.dev"
     http:
       paths:
