@@ -6,7 +6,7 @@ metadata:
   labels:
     app: dev-bike-nginx
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: dev-bike-nginx
