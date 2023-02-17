@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-bike-nginx
+  namespace: default
+  labels:
+    app: dev-bike-nginx
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: dev-bike-nginx
+  template:
+    metadata:
+      labels:
+        app: dev-bike-nginx
+    spec:
+      initContainers:
+      - name: busybox
+        image: alpine/git
+        volumeMounts:
+          - name: dev-bike-html-volume
+            mountPath: /tmp
+        command:
+        - sh
+        - -c
+        - git clone --branch bike --single-branch https://github.com/jpconstantineau/jpconstantineau-web.git /tmp && rm -rf /tmp/.git
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: dev-bike-html-volume
+            mountPath: /usr/share/nginx/html
+      volumes:
+      - name: dev-bike-html-volume
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-bike-nginx-service
+  namespace: default
+spec:
+  selector:
+    app: dev-bike-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dev-bike-nginx-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  rules:
+  - host: "bike.dev.jpto.dev"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: dev-bike-nginx-service
+            port:
+              number: 80
+  tls:
+  - hosts: 
+    - bike.dev.jpto.dev
+    secretName: dev-bike-jptodev-tls-production              
