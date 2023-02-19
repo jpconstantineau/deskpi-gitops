@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-filemanager
+  namespace: prod-filemanager
+  labels:
+    app: prod-filemanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-filemanager
+  template:
+    metadata:
+      labels:
+        app: prod-filemanager
+    spec:
+      initContainers:
+      - name: busybox-database
+        image: alpine/git
+        volumeMounts:
+          - name: filemanager-database-volume
+            mountPath: /tmp
+        command:
+        - sh
+        - -c
+        - touch /tmp/database.db
+      containers:
+      - name: prod-filemanager
+        image:  filebrowser/filebrowser
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: prod-filemanager-data-volume
+            mountPath: /srv
+          - name: prod-filemanager-database-volume
+            mountPath: /database.db  
+            subPath: database.db
+      volumes:
+      - name: prod-filemanager-data-volume
+        emptyDir: {}
+      - name: prod-filemanager-database-volume
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prod-filemanager-service
+  namespace: prod-filemanager
+spec:
+  selector:
+    app: prod-filemanager
+  ports:
+    - protocol: TCP
+      port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prod-filemanager-ingress
+  namespace: prod-filemanager
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    #traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+spec:
+  rules:
+  - host: "fm.jpto.dev"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: prod-filemanager-service
+            port:
+              number: 80
+  tls:
+  - hosts: 
+    - fm.jpto.dev
+    secretName: fm-jpto-tls-production
