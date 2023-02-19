@@ -48,21 +48,7 @@ spec:
         - name: DOCKERHUB
           value: 'https://hub.docker.com/repositories/jpconstantineau'
         - name: FOOTER
-          value: 'Pierre Constantineau © 2023'  
-        - name: CUSTOM_BUTTON_TEXT
-          value: 'Tindie'  
-        - name: CUSTOM_BUTTON_URL
-          value: 'https://www.tindie.com/stores/jpconstantineau/'  
-        - name: CUSTOM_BUTTON_COLOR
-          value: '#000000'  
-        - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: '#ffffff'  
-        - name: CUSTOM_BUTTON_ALT_TEXT
-          value: 'I Sell on Tindie'  
-        - name: CUSTOM_BUTTON_NAME
-          value: 'Tindie'  
-        - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard'  
+          value: 'Pierre Constantineau © 2023'   
         ports:
         - containerPort: 3000
 ---
