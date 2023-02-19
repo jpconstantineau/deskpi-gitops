@@ -39,7 +39,7 @@ metadata:
   namespace: dev-llink
 spec:
   selector:
-    app: dev-llink
+    app: dev-llink-service
   ports:
     - protocol: TCP
       port: 80
@@ -62,7 +62,7 @@ spec:
         path: /
         backend:
           service:
-            name: dev-llink-dummy
+            name: dev-llink-service
             port:
               number: 80
   tls:
