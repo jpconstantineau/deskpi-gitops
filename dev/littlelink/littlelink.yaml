@@ -29,12 +29,6 @@ spec:
           value: 'Pierre Constantineau'
         - name: META_KEYWORDS
           value: 'HomeLab, Keyboards, Arduino, Software, Hardware, Engineering'   
-        - name: LANG
-          value: 'en'
-        - name: META_INDEX_STATUS
-          value: 'noindex'  
-        - name: THEME
-          value: 'Dark'  
         - name: NAME
           value: 'Pierre Constantineau PhD'  
 ---
