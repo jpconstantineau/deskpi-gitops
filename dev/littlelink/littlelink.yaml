@@ -62,7 +62,7 @@ spec:
         path: /
         backend:
           service:
-            name: dev-llink
+            name: dev-llink-dummy
             port:
               number: 80
   tls:
