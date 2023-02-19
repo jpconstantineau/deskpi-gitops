@@ -24,17 +24,17 @@ spec:
         - name: META_DESCRIPTION
           value: 'Links for Dr J. Pierre Constantineau'
         - name: META_AUTHOR
-          value: 'Pierre Constantineau'  
+          value: 'Pierre Constantineau'
         - name: META_KEYWORDS
           value: 'HomeLab, Keyboards, Arduino, Software, Hardware, Engineering'   
         - name: LANG
-          value: 'en'  
+          value: 'en'
         - name: META_INDEX_STATUS
           value: 'noindex'  
         - name: THEME
           value: 'Dark'  
         - name: NAME
-          value: 'Pierre Constantineau, PhD'  
+          value: 'Pierre Constantineau PhD'  
         - name: BIO
           value: 'Software | Arduino | Keyboard Hardware/Firmware | Content Creator on YouTube | Outdoor Enthusiast'  
         - name: AVATAR_URL
