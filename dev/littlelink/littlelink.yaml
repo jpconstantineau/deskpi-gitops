@@ -39,7 +39,7 @@ metadata:
   namespace: default
 spec:
   selector:
-    app: dev-llink
+    app: littlelink-server
   ports:
     - protocol: TCP
       port: 80
