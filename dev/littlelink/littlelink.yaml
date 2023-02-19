@@ -44,7 +44,9 @@ spec:
         - name: LINKED_IN
           value: 'https://www.linkedin.com/in/pierre-constantineau-ab81394/'  
         - name: YOUTUBE
-          value: 'https://www.youtube.com/@BlueMicroWirelessKeyboards'  
+          value: 'https://www.youtube.com/@BlueMicroWirelessKeyboards'
+        - name: DOCKERHUB
+          value: 'https://hub.docker.com/repositories/jpconstantineau'
         - name: FOOTER
           value: 'Pierre Constantineau © 2023'  
         - name: CUSTOM_BUTTON_TEXT
