@@ -38,8 +38,8 @@ spec:
     app: dev-llink
   ports:
     - protocol: TCP
-      port: 3000
-      targetport: 80
+      port: 80
+      targetport: 3000
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
