@@ -19,7 +19,7 @@ spec:
       - name: busybox-database
         image: alpine/git
         volumeMounts:
-          - name: filemanager-database-volume
+          - name: prod-filemanager-database-volume
             mountPath: /tmp
         command:
         - sh
