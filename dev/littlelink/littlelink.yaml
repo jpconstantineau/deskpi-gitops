@@ -55,7 +55,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dev-llink-service
+  name: dev-llink
   namespace: dev-llink
 spec:
   selector:
@@ -68,7 +68,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dev-llink-ingress
+  name: dev-llink
   namespace: dev-llink
   annotations:
     kubernetes.io/ingress.class: "traefik"
@@ -82,7 +82,7 @@ spec:
         path: /
         backend:
           service:
-            name: dev-llink-service
+            name: dev-llink
             port:
               number: 80
   tls:
