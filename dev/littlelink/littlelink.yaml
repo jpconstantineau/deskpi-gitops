@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dev-llink
-  namespace: dev-llink
+  namespace: default
   labels:
     app: dev-llink
 spec:
@@ -35,8 +35,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dev-llink
-  namespace: dev-llink
+  name: dev-llink-service
+  namespace: default
 spec:
   selector:
     app: dev-llink
@@ -48,8 +48,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dev-llink
-  namespace: dev-llink
+  name: dev-llink-ingress
+  namespace: default
   annotations:
     kubernetes.io/ingress.class: "traefik"
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -62,7 +62,7 @@ spec:
         path: /
         backend:
           service:
-            name: dev-llink
+            name: dev-llink-service
             port:
               number: 80
   tls:
