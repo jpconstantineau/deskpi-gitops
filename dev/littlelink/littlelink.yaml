@@ -23,8 +23,40 @@ spec:
           value: 'Pierre Constantineau'
         - name: AVATAR_URL
           value: 'https://avatars.githubusercontent.com/u/1149816?v=4'  
+        - name: BIO
+          value: 'Software | Arduino | Keyboard Hardware/Firmware | Content Creator on YouTube | Outdoor Enthusiast'  
+        - name: AVATAR_URL
+          value: 'https://avatars.githubusercontent.com/u/1149816?v=4'  
         - name: GITHUB
           value: 'https://github.com/jpconstantineau'
+        - name: LINKED_IN
+          value: 'https://www.linkedin.com/in/pierre-constantineau-ab81394/'  
+        - name: YOUTUBE
+          value: 'https://www.youtube.com/@BlueMicroWirelessKeyboards'
+        - name: DOCKERHUB
+          value: 'https://hub.docker.com/repositories/jpconstantineau'
+        - name: FOOTER
+          value: 'Pierre Constantineau © 2023'        
+        - name: LANG
+          value: 'en'
+        - name: META_INDEX_STATUS
+          value: 'noindex'  
+        - name: THEME
+          value: 'Dark'  
+        - name: CUSTOM_BUTTON_TEXT
+          value: 'Tindie'  
+        - name: CUSTOM_BUTTON_URL
+          value: 'https://www.tindie.com/stores/jpconstantineau/'  
+        - name: CUSTOM_BUTTON_COLOR
+          value: '#000000'  
+        - name: CUSTOM_BUTTON_TEXT_COLOR
+          value: '#ffffff'  
+        - name: CUSTOM_BUTTON_ALT_TEXT
+          value: 'I Sell on Tindie'  
+        - name: CUSTOM_BUTTON_NAME
+          value: 'Tindie'  
+        - name: CUSTOM_BUTTON_ICON
+          value: 'fas fa-keyboard' 
         ports:
         - containerPort: 3000
 ---
