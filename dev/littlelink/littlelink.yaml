@@ -21,6 +21,20 @@ spec:
         env:
         - name: META_TITLE
           value: 'Pierre Constantineau'
+        - name: META_DESCRIPTION
+          value: 'Links for Dr J. Pierre Constantineau'
+        - name: META_AUTHOR
+          value: 'Pierre Constantineau'
+        - name: META_KEYWORDS
+          value: 'HomeLab, Keyboards, Arduino, Software, Hardware, Engineering'   
+        - name: LANG
+          value: 'en'
+        - name: META_INDEX_STATUS
+          value: 'noindex'  
+        - name: THEME
+          value: 'Dark'  
+        - name: NAME
+          value: 'Pierre Constantineau PhD'  
         - name: AVATAR_URL
           value: 'https://avatars.githubusercontent.com/u/1149816?v=4'  
         - name: BIO
@@ -35,14 +49,10 @@ spec:
           value: 'https://www.youtube.com/@BlueMicroWirelessKeyboards'
         - name: DOCKERHUB
           value: 'https://hub.docker.com/repositories/jpconstantineau'
+        - name: STRAVA
+          value: 'https://www.strava.com/athletes/17455724'  
         - name: FOOTER
           value: 'Pierre Constantineau © 2023'        
-        - name: LANG
-          value: 'en'
-        - name: META_INDEX_STATUS
-          value: 'noindex'  
-        - name: THEME
-          value: 'Dark'  
         - name: CUSTOM_BUTTON_TEXT
           value: 'Tindie'  
         - name: CUSTOM_BUTTON_URL
