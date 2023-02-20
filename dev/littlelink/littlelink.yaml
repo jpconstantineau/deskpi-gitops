@@ -1,55 +1,50 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dev-llink-app
-  namespace: default
+  name: dev-llink
+  namespace: dev-llink
   labels:
-    app: dev-llink-app
+    app: dev-llink
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dev-llink-app
+      app: dev-llink
   template:
     metadata:
       labels:
-        app: dev-llink-app
+        app: dev-llink
     spec:
       containers:
       - name: littlelink-server
         image: ghcr.io/techno-tim/littlelink-server:latest
-        ports:
-        - containerPort: 3000
         env:
         - name: META_TITLE
           value: 'Pierre Constantineau'
-        - name: META_DESCRIPTION
-          value: 'Links for Dr J. Pierre Constantineau'
-        - name: META_AUTHOR
-          value: 'Pierre Constantineau'
-        - name: META_KEYWORDS
-          value: 'HomeLab, Keyboards, Arduino, Software, Hardware, Engineering'   
-        - name: NAME
-          value: 'Pierre Constantineau PhD'  
+        - name: AVATAR_URL
+          value: 'https://avatars.githubusercontent.com/u/1149816?v=4'  
+        - name: GITHUB
+          value: 'https://github.com/jpconstantineau'
+        ports:
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: dev-llink-app-service
-  namespace: default
+  name: dev-llink-service
+  namespace: dev-llink
 spec:
   selector:
-    app: dev-llink-app
+    app: dev-llink
   ports:
     - protocol: TCP
-      port: 80
-      targetport: 3000
+      port: 3000
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: dev-llink-app-ingress
-  namespace: default
+  name: dev-llink-ingress
+  namespace: dev-llink
   annotations:
     kubernetes.io/ingress.class: "traefik"
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -62,7 +57,7 @@ spec:
         path: /
         backend:
           service:
-            name: dev-llink-app-service
+            name: dev-llink-service
             port:
               number: 80
   tls:
