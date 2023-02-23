@@ -17,6 +17,15 @@ spec:
     spec:
       initContainers:
       - name: busybox
+        image: alpine/git
+        volumeMounts:
+          - name: dev-bike-html-volume
+            mountPath: /tmp
+        command:
+        - sh
+        - -c
+        - git clone  --single-branch https://github.com/jpconstantineau/jpconstantineau-store-hugo.git /tmp && rm -rf /tmp/.git
+      - name: hugo
         image: klakegg/hugo:ext-ubuntu
         volumeMounts:
           - name: dev-store-html-volume
@@ -24,7 +33,7 @@ spec:
         command:
         - sh
         - -c
-        - git clone --single-branch https://github.com/jpconstantineau/jpconstantineau-store-hugo.git /tmp && rm -rf /tmp/.git  && cd store && hugo --minify && cp public /tmp && rm -rf /tmp/store
+        - sleep 60 && cd /tmp/store && hugo --minify && cp /tmp/store/public /tmp && rm -rf /tmp/store
       containers:
       - name: nginx
         image: nginx:1.14.2
