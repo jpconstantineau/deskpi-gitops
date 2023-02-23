@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-store-nginx
+  namespace: default
+  labels:
+    app: dev-store-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-store-nginx
+  template:
+    metadata:
+      labels:
+        app: dev-store-nginx
+    spec:
+      initContainers:
+      - name: busybox
+        image: klakegg/hugo:ext-ubuntu
+        volumeMounts:
+          - name: dev-store-html-volume
+            mountPath: /tmp
+        command:
+        - sh
+        - -c
+        - git clone --single-branch https://github.com/jpconstantineau/jpconstantineau-store-hugo.git /tmp && rm -rf /tmp/.git  && cd store && hugo --minify && cp public /tmp && rm -rf /tmp/store
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: dev-store-html-volume
+            mountPath: /usr/share/nginx/html
+      volumes:
+      - name: dev-store-html-volume
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-store-nginx-service
+  namespace: default
+spec:
+  selector:
+    app: dev-store-nginx
+  ports:
+    - protocol: TCP
+      port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dev-store-nginx-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  rules:
+  - host: "store.192-168-10-42.nip.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: dev-store-nginx-service
+            port:
+              number: 80
+  - host: "store.dev.jpto.dev"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: dev-store-nginx-service
+            port:
+              number: 80
+  tls:
+  - hosts: 
+    - store.dev.jpto.dev
+    secretName: dev-store-jptodev-tls-production              
