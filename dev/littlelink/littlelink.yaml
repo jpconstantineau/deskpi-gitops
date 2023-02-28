@@ -38,7 +38,7 @@ spec:
         - name: AVATAR_URL
           value: 'https://avatars.githubusercontent.com/u/1149816?v=4'  
         - name: BIO
-          value: 'Software | Arduino | Keyboard Hardware/Firmware | Content Creator on YouTube | Outdoor Enthusiast'  
+          value: 'Software Product Manager | Software Development Management |  Keyboard Hardware/Firmware | CircuitPython | Arduino | Content Creator on YouTube | Outdoor Enthusiast'  
         - name: AVATAR_URL
           value: 'https://avatars.githubusercontent.com/u/1149816?v=4'  
         - name: GITHUB
