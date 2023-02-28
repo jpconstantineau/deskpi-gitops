@@ -56,17 +56,17 @@ spec:
         - name: CUSTOM_BUTTON_TEXT
           value: 'Tindie'  
         - name: CUSTOM_BUTTON_URL
-          value: 'https://www.tindie.com/stores/jpconstantineau/','https://www.credly.com/users/pierre-constantineau/badges'  
+          value: 'https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges'  
         - name: CUSTOM_BUTTON_COLOR
-          value: '#000000','#000000'  
+          value: '#000000,#000000'  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: '#ffffff','#ffffff'  
+          value: '#ffffff,#ffffff'  
         - name: CUSTOM_BUTTON_ALT_TEXT
-          value: 'I Sell on Tindie','My Badges'  
+          value: 'I Sell on Tindie,My Badges'  
         - name: CUSTOM_BUTTON_NAME
-          value: 'Tindie','Credly'  
+          value: 'Tindie,Credly'  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard','fas fa-badge' 
+          value: 'fas fa-keyboard,fas fa-badge' 
         ports:
         - containerPort: 3000
 ---
