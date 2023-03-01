@@ -54,21 +54,21 @@ spec:
         - name: FOOTER
           value: 'Pierre Constantineau © 2023'        
         - name: CUSTOM_BUTTON_TEXT
-          value: "Tindie, Credly, Arduino, CircuitPython"  
+          value: "Tindie, Credly, Arduino, CircuitPython, ResearchGate"  
         - name: CUSTOM_BUTTON_URL
-          value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau,https://circuitpython.org/downloads?q=jpconstantineau"  
+          value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau,https://circuitpython.org/downloads?q=jpconstantineau,https://www.researchgate.net/profile/J-Constantineau"  
         - name: CUSTOM_BUTTON_COLOR
-          value: "#17aeb9,#000000,#008184,#652f8f"  
+          value: "#17aeb9,#000000,#008184,#652f8f,#40BA9B"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: "#ffffff,#ffffff,#ffffff,#ffffff"  
+          value: "#ffffff,#ffffff,#ffffff,#ffffff,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
-          value: "I Sell on Tindie,My Badges,My Arduino Libraries,My CircuitPython Boards"  
+          value: "I Sell on Tindie,My Badges,My Arduino Libraries,My CircuitPython Boards, Published Papers"  
         - name: CUSTOM_BUTTON_NAME
-          value: "TINDIE, CREDLY, ARDUINO, CIRCUITPYTHON"  
+          value: "TINDIE, CREDLY, ARDUINO, CIRCUITPYTHON, RESEARCHGATE"  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard,fas fa-certificate,fas fa-keyboard,fas fa-keyboard'
+          value: 'fas fa-keyboard,fas fa-certificate,fas fa-keyboard,fas fa-keyboard,fas fa-book'
         - name: BUTTON_ORDER
-          value: LINKED_IN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,CIRCUITPYTHON,YOUTUBE,TINDIE,STRAVA
+          value: LINKED_IN,CREDLY,RESEARCHGATE,GITHUB,DOCKERHUB,ARDUINO,CIRCUITPYTHON,YOUTUBE,TINDIE,STRAVA
         - name: FAVICON_URL
           value: 'https://avatars.githubusercontent.com/u/1149816?v=3'
         ports:
