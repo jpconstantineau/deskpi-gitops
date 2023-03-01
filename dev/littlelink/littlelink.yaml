@@ -64,7 +64,7 @@ spec:
         - name: CUSTOM_BUTTON_ALT_TEXT
           value: 'I Sell on Tindie'  
         - name: CUSTOM_BUTTON_NAME
-          value: 'Tindie'  
+          value: "'Tindie', 'Credly'"  
         - name: CUSTOM_BUTTON_ICON
           value: 'fas fa-keyboard' 
         ports:
