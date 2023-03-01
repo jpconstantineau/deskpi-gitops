@@ -68,7 +68,9 @@ spec:
         - name: CUSTOM_BUTTON_ICON
           value: 'fas fa-keyboard,fas fa-certificate,fas fa-keyboard,fas fa-keyboard'
         - name: BUTTON_ORDER
-          value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,CIRCUITPYTHON,YOUTUBE,TINDIE,STRAVA
+          value: LINKED_IN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,CIRCUITPYTHON,YOUTUBE,TINDIE,STRAVA
+        - name: FAVICON_URL
+          value: 'https://avatars.githubusercontent.com/u/1149816?v=3'
         ports:
         - containerPort: 3000
 ---
