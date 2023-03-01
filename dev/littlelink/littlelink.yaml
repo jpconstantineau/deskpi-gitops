@@ -54,19 +54,19 @@ spec:
         - name: FOOTER
           value: 'Pierre Constantineau © 2023'        
         - name: CUSTOM_BUTTON_TEXT
-          value: 'Tindie'  
+          value: "'Tindie','Credly'"  
         - name: CUSTOM_BUTTON_URL
-          value: 'https://www.tindie.com/stores/jpconstantineau/'  
+          value: "'https://www.tindie.com/stores/jpconstantineau/','https://www.credly.com/users/pierre-constantineau/badges'"  
         - name: CUSTOM_BUTTON_COLOR
-          value: '#000000'  
+          value: "'#000000','#000000'"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: '#ffffff'  
+          value: "'#ffffff','#ffffff'"  
         - name: CUSTOM_BUTTON_ALT_TEXT
-          value: 'I Sell on Tindie'  
+          value: "'I Sell on Tindie','My Badges'"  
         - name: CUSTOM_BUTTON_NAME
           value: "'Tindie', 'Credly'"  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard' 
+          value: "'fas fa-keyboard', 'fas fa-badge'" 
         ports:
         - containerPort: 3000
 ---
