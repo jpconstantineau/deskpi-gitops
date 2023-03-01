@@ -58,7 +58,7 @@ spec:
         - name: CUSTOM_BUTTON_URL
           value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau,https://circuitpython.org/downloads?q=jpconstantineau,https://www.researchgate.net/profile/J-Constantineau"  
         - name: CUSTOM_BUTTON_COLOR
-          value: "#17aeb9,#000000,#008184,#652f8f,#40BA9B"  
+          value: "#17aeb9,#ff6b00,#008184,#652f8f,#40BA9B"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
           value: "#ffffff,#ffffff,#ffffff,#ffffff,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
