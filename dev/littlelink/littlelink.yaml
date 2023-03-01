@@ -58,15 +58,15 @@ spec:
         - name: CUSTOM_BUTTON_URL
           value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges"  
         - name: CUSTOM_BUTTON_COLOR
-          value: "#000000,#000000"  
+          value: "#17aeb9,#000000"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: "#17AEB9,#ffffff"  
+          value: "#ffffff,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
           value: "I Sell on Tindie,My Badges"  
         - name: CUSTOM_BUTTON_NAME
           value: "TINDIE, CREDLY"  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard,fas fa-cog'
+          value: 'fas fa-keyboard,fas fa-badge-check'
         - name: BUTTON_ORDER
           value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,YOUTUBE,TINDIE,STRAVA
         ports:
