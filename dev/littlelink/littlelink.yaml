@@ -60,7 +60,7 @@ spec:
         - name: CUSTOM_BUTTON_COLOR
           value: "#000000,#000000"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: "#ffffff,#ffffff"  
+          value: "#17AEB9,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
           value: "I Sell on Tindie,My Badges"  
         - name: CUSTOM_BUTTON_NAME
