@@ -58,7 +58,7 @@ spec:
         - name: CUSTOM_BUTTON_URL
           value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau,https://circuitpython.org/downloads?q=jpconstantineau"  
         - name: CUSTOM_BUTTON_COLOR
-          value: "#17aeb9,#000000,#008184,#652f8"  
+          value: "#17aeb9,#000000,#008184,#652f8f"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
           value: "#ffffff,#ffffff,#ffffff,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
@@ -66,7 +66,7 @@ spec:
         - name: CUSTOM_BUTTON_NAME
           value: "TINDIE, CREDLY, ARDUINO, CIRCUITPYTHON"  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard,fas fa-seal,fas fa-keyboard,fas fa-keyboard'
+          value: 'fas fa-keyboard,fas fa-certificate,fas fa-keyboard,fas fa-keyboard'
         - name: BUTTON_ORDER
           value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,CIRCUITPYTHON,YOUTUBE,TINDIE,STRAVA
         ports:
