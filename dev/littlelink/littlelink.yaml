@@ -54,21 +54,21 @@ spec:
         - name: FOOTER
           value: 'Pierre Constantineau © 2023'        
         - name: CUSTOM_BUTTON_TEXT
-          value: "Tindie, Credly"  
+          value: "Tindie, Credly, Arduino"  
         - name: CUSTOM_BUTTON_URL
-          value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges"  
+          value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau"  
         - name: CUSTOM_BUTTON_COLOR
-          value: "#17aeb9,#000000"  
+          value: "#17aeb9,#000000,#008184"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: "#ffffff,#ffffff"  
+          value: "#ffffff,#ffffff,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
-          value: "I Sell on Tindie,My Badges"  
+          value: "I Sell on Tindie,My Badges,My Arduino Libraries"  
         - name: CUSTOM_BUTTON_NAME
-          value: "TINDIE, CREDLY"  
+          value: "TINDIE, CREDLY, ARDUINO"  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard,fas fa-badge-check'
+          value: 'fas fa-keyboard,fas fa-badge, fas fa-keyboard'
         - name: BUTTON_ORDER
-          value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,YOUTUBE,TINDIE,STRAVA
+          value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,YOUTUBE,TINDIE,STRAVA
         ports:
         - containerPort: 3000
 ---
