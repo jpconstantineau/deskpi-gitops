@@ -66,7 +66,7 @@ spec:
         - name: CUSTOM_BUTTON_NAME
           value: "Tindie, Credly"  
         - name: CUSTOM_BUTTON_ICON
-          value: "fas fa-keyboard, fas fa-badge-check"
+          value: "fas fa-keyboard,fas fa-keyboard"
         ports:
         - containerPort: 3000
 ---
