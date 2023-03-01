@@ -56,19 +56,19 @@ spec:
         - name: CUSTOM_BUTTON_TEXT
           value: "Tindie, Credly, Arduino"  
         - name: CUSTOM_BUTTON_URL
-          value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau"  
+          value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau,https://circuitpython.org/downloads?q=jpconstantineau"  
         - name: CUSTOM_BUTTON_COLOR
-          value: "#17aeb9,#000000,#008184"  
+          value: "#17aeb9,#000000,#008184,#652f8"  
         - name: CUSTOM_BUTTON_TEXT_COLOR
-          value: "#ffffff,#ffffff,#ffffff"  
+          value: "#ffffff,#ffffff,#ffffff,#ffffff"  
         - name: CUSTOM_BUTTON_ALT_TEXT
-          value: "I Sell on Tindie,My Badges,My Arduino Libraries"  
+          value: "I Sell on Tindie,My Badges,My Arduino Libraries,My CircuitPython Boards"  
         - name: CUSTOM_BUTTON_NAME
-          value: "TINDIE, CREDLY, ARDUINO"  
+          value: "TINDIE, CREDLY, ARDUINO, CIRCUITPYTHON"  
         - name: CUSTOM_BUTTON_ICON
-          value: 'fas fa-keyboard,fas fa-badge, fas fa-keyboard'
+          value: 'fas fa-keyboard,fas fa-check,fas fa-keyboard,fas fa-keyboard'
         - name: BUTTON_ORDER
-          value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,YOUTUBE,TINDIE,STRAVA
+          value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,ARDUINO,CIRCUITPYTHON,YOUTUBE,TINDIE,STRAVA
         ports:
         - containerPort: 3000
 ---
