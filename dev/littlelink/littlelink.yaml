@@ -64,9 +64,11 @@ spec:
         - name: CUSTOM_BUTTON_ALT_TEXT
           value: "I Sell on Tindie,My Badges"  
         - name: CUSTOM_BUTTON_NAME
-          value: "Tindie, Credly"  
+          value: "TINDIE, CREDLY"  
         - name: CUSTOM_BUTTON_ICON
-          value: "fas fa-keyboard,fas fa-keyboard"
+          value: 'fas fa-keyboard,fas fa-cog'
+        - name: BUTTON_ORDER
+          value: LINKEDIN,CREDLY,GITHUB,DOCKERHUB,YOUTUBE,TINDIE,STRAVA
         ports:
         - containerPort: 3000
 ---
