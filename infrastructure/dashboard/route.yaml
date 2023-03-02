@@ -19,7 +19,7 @@ spec:
     - websecure
   routes:                           # [2]
   - kind: Rule
-    match:   Host(`k3sdashboard.dev.jpto.dev`) # [3]
+    match:   Host(`k3sdashboard.192-168-10-42.nip.io`) # [3]
     priority: 10                    # [4]
     services:                       # [8]
     - kind: Service 
