@@ -36,9 +36,9 @@ spec:
 #              value: "minio123"
           env:
             - name: MINIO_SERVER_URL
-              value: https://s3.192-168-10-42.nip.io
+              value: http://s3.192-168-10-42.nip.io
             - name: MINIO_BROWSER_REDIRECT_URL
-              value: https://minio.192-168-10-42.nip.io
+              value: http://minio.192-168-10-42.nip.io
           livenessProbe:
             httpGet:
               path: /minio/health/live
