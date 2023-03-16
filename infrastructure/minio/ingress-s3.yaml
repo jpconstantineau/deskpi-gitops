@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: minio-ingress
+  name: minio-ingress-s3
   namespace: minio-dev
   annotations:
     kubernetes.io/ingress.class: "traefik"
