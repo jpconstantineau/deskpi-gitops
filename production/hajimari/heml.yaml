@@ -13,6 +13,8 @@ spec:
       parameters:
       - name: defaultEnable
         value: "true"
+      - name: NamespaceSelector.any
+        value: "true"
       - name: persistence.data.enabled
         value: "true"
       - name: persistence.data.existingClaim
