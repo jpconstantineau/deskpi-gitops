@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grafana-ui
+  namespace: monitoring
+  annotations:
+      kubernetes.io/ingress.class: "traefik"
+spec:
+  rules:
+  # Use the host you used in your kubernetes Ingress Configurations
+  - host: grafana.192-168-10-42.nip.io
+    http:
+      paths:
+      - backend:
+          service:
+            name: grafana
+            port:
+              number: 3000
+        path: /
+        pathType: Prefix
