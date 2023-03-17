@@ -6,7 +6,7 @@ metadata:
   annotations:
     hajimari.io/enable: "True"
     hajimari.io/appName: "Hajimari"
-    hajimari.io/icon: "mdiMenu"
+    hajimari.io/icon: "mdi:menu"
     hajimari.io/targetBlank: "True"
     hajimari.io/group: "Production"
     kubernetes.io/ingress.class: "traefik"

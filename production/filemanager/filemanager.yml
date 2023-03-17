@@ -62,7 +62,7 @@ metadata:
   annotations:
     hajimari.io/enable: "True"
     hajimari.io/appName: "File Manager"
-    hajimari.io/icon: "mdiFileCloud"
+    hajimari.io/icon: "mdi:filecloud"
     hajimari.io/targetBlank: "True"
     hajimari.io/group: "Production"
     kubernetes.io/ingress.class: "traefik"
