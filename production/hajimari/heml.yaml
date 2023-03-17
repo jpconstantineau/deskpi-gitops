@@ -17,8 +17,8 @@ spec:
         value: "true"
       - name: persistence.data.existingClaim
         value: hajimari-data-v1
-    path: hajimari
-    repoURL: https://github.com/toboshii/hajimari/tree/main/charts
+    path: charts/hajimari
+    repoURL: https://github.com/toboshii/hajimari
   syncPolicy:
     automated:
       selfHeal: true
