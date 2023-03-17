@@ -4,10 +4,10 @@ metadata:
   name: hajimari-ingress
   namespace: hajimari
   annotations:
-    hajimari.io/enable: True
+    hajimari.io/enable: "True"
     hajimari.io/appName: "Hajimari"
-    hajimari.io/icon: mdiMenu
-    hajimari.io/targetBlank: true
+    hajimari.io/icon: "mdiMenu"
+    hajimari.io/targetBlank: "True"
     hajimari.io/group: "Production"
     kubernetes.io/ingress.class: "traefik"
     cert-manager.io/cluster-issuer: letsencrypt-production

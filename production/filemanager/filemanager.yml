@@ -60,10 +60,10 @@ metadata:
   name: prod-filemanager-ingress
   namespace: prod-filemanager
   annotations:
-    hajimari.io/enable: True
+    hajimari.io/enable: "True"
     hajimari.io/appName: "File Manager"
-    hajimari.io/icon: mdiFileCloud
-    hajimari.io/targetBlank: true
+    hajimari.io/icon: "mdiFileCloud"
+    hajimari.io/targetBlank: "True"
     hajimari.io/group: "Production"
     kubernetes.io/ingress.class: "traefik"
     cert-manager.io/cluster-issuer: letsencrypt-production
