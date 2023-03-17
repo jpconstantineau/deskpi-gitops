@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hajimari
+  namespace: argocd
+spec:
+  destination:
+    namespace: hajimari
+    server: https://kubernetes.default.svc
+  project: production
+  source:
+    helm:
+      parameters:
+      - name: defaultEnable
+        value: "true"
+      - name: persistence.data.enabled
+        value: "true"
+      - name: persistence.data.existingClaim
+        value: hajimari-data-v1
+    path: hajimari/hajimari
+    repoURL: https://hajimari.io
+  syncPolicy:
+    automated:
+      selfHeal: true
