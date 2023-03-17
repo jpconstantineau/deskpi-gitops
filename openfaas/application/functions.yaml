@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openfaas-functions
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: openfaas
+  source:
+    path: ./openfaas/functions
+    repoURL: https://github.com/jpconstantineau/deskpi-gitops.git
+  syncPolicy:
+    automated:
+      selfHeal: true
