@@ -1,0 +1,21 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mongo-db
+  namespace: prod-mongodb
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    #cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  rules:
+  - host: "mongodb.192-168-10-43.nip.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: mongo-db
+            port:
+              number: 27017
