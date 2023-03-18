@@ -11,15 +11,15 @@ spec:
   source:
     helm:
       parameters:
-      - name: defaultEnable
+      - name: hajimari.defaultEnable
         value: "true"
-      - name: namespaceSelector.any
+      - name: hajimari.namespaceSelector.any
         value: "true"
       - name: persistence.data.enabled
         value: "true"
       - name: persistence.data.existingClaim
         value: hajimari-data-v1
-      - name: showGreeting
+      - name: hajimari.showGreeting
         value: "false"
     path: charts/hajimari
     repoURL: https://github.com/toboshii/hajimari
