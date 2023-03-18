@@ -22,7 +22,7 @@
       spec: 
         containers: 
           - name: "mongo-db"
-            image: "mongo"
+            image: "arm64v8/mongo"
             env: 
               - name: "MONGO_INITDB_ROOT_USERNAME"
                 value: "user"
