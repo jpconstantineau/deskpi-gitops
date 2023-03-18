@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prod-mongodb
+  name: prod-mariadb
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
@@ -15,12 +15,12 @@ spec:
   source:
     repoURL: https://github.com/jpconstantineau/deskpi-gitops.git
     targetRevision: HEAD
-    path: ./production/mongodb
+    path: ./production/mariadb
    
   # Destination cluster and namespace to deploy the application
   destination:
     server: https://kubernetes.default.svc
-    namespace: prod-mongodb
+    namespace: prod-mariadb
 
   # Sync policy
   syncPolicy:

@@ -1,0 +1,20 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mariadb-admin
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    #cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  rules:
+  - host: "admin.192-168-10-43.nip.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: mariadb-admin-service
+            port:
+              number: 8080
