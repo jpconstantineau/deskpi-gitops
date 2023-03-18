@@ -1,0 +1,20 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mariadb-db
+  annotations:
+    kubernetes.io/ingress.class: "traefik"
+    #cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  rules:
+  - host: "db.192-168-10-43.nip.io"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: mariadb-internal-service
+            port:
+              number: 3306
