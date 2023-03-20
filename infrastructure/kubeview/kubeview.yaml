@@ -10,10 +10,6 @@ spec:
     repoURL: https://raw.githubusercontent.com/benc-uk/kubeview/master/charts
     chart: kubeview
     targetRevision: '*'
-    helm:
-      values: |
-        ingress:
-          enabled: false
   destination:
     server: https://kubernetes.default.svc
     namespace: kubeview
