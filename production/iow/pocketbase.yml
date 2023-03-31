@@ -68,14 +68,14 @@ spec:
           service:
             name: prod-iow-pocketbase-service
             port:
-              number: 80        
+              number: 8090        
       - pathType: Prefix
         path: /api/
         backend:
           service:
             name: prod-iow-pocketbase-service
             port:
-              number: 80        
+              number: 8090        
 
   tls:
   - hosts: 
