@@ -16,7 +16,7 @@ spec:
         app: prod-iow-api-corr-ht-h2s-h2
     spec:
       containers:
-      - name: nginx
+      - name: api-corr-ht-h2s-h2
         image: ghcr.io/iow-jpto-dev/api-corr-ht-h2s-h2:main
         ports:
         - containerPort: 3000
@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: prod-iow-nginx-api-corr-ht-h2s-h2-service
+  name: prod-iow-api-corr-ht-h2s-h2-service
   namespace: prod-iow
 spec:
   selector:
@@ -56,7 +56,7 @@ spec:
         path: /api-corr-ht-h2s-h2/
         backend:
           service:
-            name: prod-iow-nginx-api-corr-ht-h2s-h2-service
+            name: prod-iow-api-corr-ht-h2s-h2-service
             port:
               number: 3000        
   tls:
