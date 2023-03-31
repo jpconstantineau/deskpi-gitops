@@ -53,7 +53,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /api-corr-ht-h2s-h2/
+        path: /calc/
         backend:
           service:
             name: prod-iow-api-corr-ht-h2s-h2-service
