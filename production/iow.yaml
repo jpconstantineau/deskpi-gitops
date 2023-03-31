@@ -13,9 +13,9 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/jpconstantineau/deskpi-gitops.git
+    repoURL: https://github.com/iow-jpto-dev/deploy.git
     targetRevision: HEAD
-    path: ./production/iow
+    path: ./iow
    
   # Destination cluster and namespace to deploy the application
   destination:
