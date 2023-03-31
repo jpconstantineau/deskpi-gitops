@@ -19,7 +19,7 @@ spec:
       - name: prod-iow-pocketbase
         image:  ghcr.io/muchobien/pocketbase:0.14
         ports:
-        - containerPort: 80
+        - containerPort: 8090
         volumeMounts:
           - name: prod-iow-pocketbase-data-volume
             mountPath: /pb_data
@@ -41,7 +41,7 @@ spec:
     app: prod-iow-pocketbase
   ports:
     - protocol: TCP
-      port: 80
+      port: 8090
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
