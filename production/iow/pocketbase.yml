@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prod-iow-pocketbase
+  namespace: prod-iow
+  labels:
+    app: prod-iow-pocketbase
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-iow-pocketbase
+  template:
+    metadata:
+      labels:
+        app: prod-iow-pocketbase
+    spec:
+      containers:
+      - name: prod-iow-pocketbase
+        image:  ghcr.io/muchobien/pocketbase:0.14
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: prod-iow-pocketbase-data-volume
+            mountPath: /pb_data
+          - name: prod-iow-pocketbase-public-volume
+            mountPath: /pb_public  
+      volumes:
+      - name: prod-iow-pocketbase-public-volume
+        emptyDir: {}
+      - name: prod-iow-pocketbase-data-volume
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prod-iow-pocketbase-service
+  namespace: prod-iow
+spec:
+  selector:
+    app: prod-iow-pocketbase
+  ports:
+    - protocol: TCP
+      port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: prod-iow-ingress
+  namespace: prod-iow
+  annotations:
+    hajimari.io/enable: "True"
+    hajimari.io/appName: "IOW Prod"
+    hajimari.io/icon: "mdi:cloud"
+    hajimari.io/targetBlank: "True"
+    hajimari.io/group: "Production"
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    #traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+spec:
+  rules:
+  - host: "iow.jpto.dev"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /_/
+        backend:
+          service:
+            name: prod-iow-pocketbase-service
+            port:
+              number: 80        
+      - pathType: Prefix
+        path: /api/
+        backend:
+          service:
+            name: prod-iow-pocketbase-service
+            port:
+              number: 80        
+
+  tls:
+  - hosts: 
+    - iow.jpto.dev
+    secretName: iow-jpto-tls-production
