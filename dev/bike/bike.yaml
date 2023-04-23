@@ -17,7 +17,7 @@ spec:
     spec:
       initContainers:
       - name: busybox
-        image: alpine/git
+        image: alpine/git:2.36.3
         volumeMounts:
           - name: dev-bike-html-volume
             mountPath: /tmp
