@@ -54,7 +54,7 @@ spec:
         - name: FOOTER
           value: 'Pierre Constantineau © 2023'        
         - name: CUSTOM_BUTTON_TEXT
-          value: "Tindie, Credly, Arduino, CircuitPython, ResearchGate"  
+          value: "Tindie, Credly, Arduino, CircuitPython, ResearchGate, TinyGo"  
         - name: CUSTOM_BUTTON_URL
           value: "https://www.tindie.com/stores/jpconstantineau/,https://www.credly.com/users/pierre-constantineau/badges,https://www.arduinolibraries.info/authors/jpconstantineau,https://circuitpython.org/downloads?q=jpconstantineau,https://www.researchgate.net/profile/J-Constantineau,https://github.com/tinygo-org/tinygo/issues?q=author%3Ajpconstantineau+"  
         - name: CUSTOM_BUTTON_COLOR
